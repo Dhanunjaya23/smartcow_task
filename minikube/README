@@ -1,0 +1,4 @@
+#TO run the react js app run the below commnad
+#kubectl create -f react_dep.yml
+#After that expose node port using below command
+#kubectl expose deployment react-deployment --type=NodePort --port=3000
