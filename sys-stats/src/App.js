@@ -5,12 +5,12 @@ import React, { Component } from 'react';
 class App extends Component {
 
   constructor(props) {
-    super();
+   super();
     this.state = {
-      cpu: 0,
-      ram: 0
+     cpu: 0,
+     ram: 0
     }
-    this.loadData = this.loadData.bind(this)
+   this.loadData = this.loadData.bind(this)
   }
 
   componentDidMount() {
@@ -20,7 +20,7 @@ class App extends Component {
 
   async loadData() {
     try {
-      const res = await fetch('http://localhost:5000/stats');
+      const res = await fetch('http://3.132.181.30:5000/stats');
       const blocks = await res.json();
       const ram = blocks.ram;
       const cpu = blocks.cpu;
