@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  creationTimestamp: "2020-11-08T07:25:39Z"
+  creationTimestamp: "2020-11-08T07:31:30Z"
   labels:
-    app: react
+    app: python
   managedFields:
   - apiVersion: v1
     fieldsType: FieldsV1
@@ -16,7 +16,7 @@ metadata:
         f:externalTrafficPolicy: {}
         f:ports:
           .: {}
-          k:{"port":3000,"protocol":"TCP"}:
+          k:{"port":5000,"protocol":"TCP"}:
             .: {}
             f:port: {}
             f:protocol: {}
@@ -28,22 +28,22 @@ metadata:
         f:type: {}
     manager: kubectl-expose
     operation: Update
-    time: "2020-11-08T07:25:39Z"
-  name: react-svc
+    time: "2020-11-08T07:31:30Z"
+  name: python-svc
   namespace: default
-  resourceVersion: "1538"
-  selfLink: /api/v1/namespaces/default/services/react-svc
-  uid: 13d697ae-2899-4ce7-b1f8-71a231bb1b02
+  resourceVersion: "2377"
+  selfLink: /api/v1/namespaces/default/services/python-svc
+  uid: 1237e23b-5cec-4d0e-8517-f01b590f13b8
 spec:
-  clusterIP: 10.97.242.17
+  clusterIP: 10.96.181.11
   externalTrafficPolicy: Cluster
   ports:
-  - nodePort: 32154
-    port: 3000
+  - nodePort: 32454
+    port: 5000
     protocol: TCP
-    targetPort: 3000
+    targetPort: 5000
   selector:
-    app: react
+    app: python
   sessionAffinity: None
   type: NodePort
 status:
