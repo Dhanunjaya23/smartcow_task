@@ -1,0 +1,8 @@
+#TO run the react js app run the below commnad
+#kubectl create -f react_dep.yml
+#kubectl create -f python_dep.yml
+#After that expose node port using below command
+#kubectl expose deployment react-deployment --type=NodePort --port=3000 --name react-svc -o yaml > react_sv.yml
+#kubectl expose deployment python-deployment --type=NodePort --port=5000 --name python-svc -o yaml > python_svc.yml
+#To Run Ingress 
+#kubectl create -f ingress.yml
